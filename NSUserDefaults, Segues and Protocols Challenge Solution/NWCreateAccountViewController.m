@@ -37,7 +37,19 @@
 
 - (IBAction)createAccountButtonPressed:(UIButton *)sender
 {
-    [self.delegate didCreateAccount];
+    if (self.usernameTextField.text != nil && self.passwordTextField.text != nil && [self.passwordTextField.text isEqualToString:self.confirmPasswordTextField.text]) {
+        
+        [[NSUserDefaults standardUserDefaults] setObject:self.usernameTextField.text forKey:USERNAME];
+        [[NSUserDefaults standardUserDefaults] setObject:self.passwordTextField.text forKey:PASSWORD];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [self.delegate didCreateAccount];
+    } else {
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Information not entered correctly" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alertView show];
+    }
+
+
 }
 
 - (IBAction)cancelButtonPressed:(UIButton *)sender

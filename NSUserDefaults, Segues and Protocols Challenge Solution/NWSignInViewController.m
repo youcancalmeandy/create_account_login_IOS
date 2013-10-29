@@ -44,7 +44,17 @@
 
 - (IBAction)loginButtonPressed:(UIButton *)sender
 {
-    [self performSegueWithIdentifier:@"toViewControllerSegue" sender:sender];
+    NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:USERNAME];
+    NSString *password = [[NSUserDefaults standardUserDefaults] objectForKey:PASSWORD];
+    
+    if ([self.usernameTextField.text isEqualToString:username] && [self.passwordTextField.text isEqualToString:password]) {
+        [self performSegueWithIdentifier:@"toViewControllerSegue" sender:sender];
+    } else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Incorrect Username/Password Combination" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        [alertView show];
+    }
+    
+    
 }
 
 #pragma mark - PrepareForSegue

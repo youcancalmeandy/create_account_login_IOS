@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define USERNAME @"usename"
+#define PASSWORD @"password"
+
 @protocol NWCreateAccountViewControllerDelegate <NSObject>
 
 -(void)didCancel;
