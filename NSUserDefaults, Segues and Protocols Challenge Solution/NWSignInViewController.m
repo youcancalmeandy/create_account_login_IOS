@@ -26,14 +26,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
+
+#pragma mark - IBActions
 
 - (IBAction)createAccountBarButtonItemPressed:(UIBarButtonItem *)sender
 {
@@ -45,9 +47,26 @@
     [self performSegueWithIdentifier:@"toViewControllerSegue" sender:sender];
 }
 
+#pragma mark - PrepareForSegue
+
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
+    if ([segue.destinationViewController isKindOfClass:[NWCreateAccountViewController class]]) {
+        NWCreateAccountViewController *createAccountVC = segue.destinationViewController;
+        createAccountVC.delegate = self;
+    }
+}
+
+#pragma mark - NWCreateViewControllerDelegate
+
+-(void)didCancel
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)didCreateAccount
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

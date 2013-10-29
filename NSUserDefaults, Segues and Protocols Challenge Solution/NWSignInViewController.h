@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NWCreateAccountViewController.h"
 
-@interface NWSignInViewController : UIViewController
+@interface NWSignInViewController : UIViewController <NWCreateAccountViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
