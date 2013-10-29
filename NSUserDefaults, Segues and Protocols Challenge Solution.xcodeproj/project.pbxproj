@@ -21,6 +21,8 @@
 		01992B7B1820363C00A40EB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01992B5D1820363C00A40EB5 /* UIKit.framework */; };
 		01992B831820363C00A40EB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01992B811820363C00A40EB5 /* InfoPlist.strings */; };
 		01992B851820363C00A40EB5 /* NSUserDefaults__Segues_and_Protocols_Challenge_SolutionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01992B841820363C00A40EB5 /* NSUserDefaults__Segues_and_Protocols_Challenge_SolutionTests.m */; };
+		01992B901820368700A40EB5 /* NWSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01992B8F1820368700A40EB5 /* NWSignInViewController.m */; };
+		01992B931820369300A40EB5 /* NWCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01992B921820369300A40EB5 /* NWCreateAccountViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		01992B801820363C00A40EB5 /* NSUserDefaults, Segues and Protocols Challenge SolutionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSUserDefaults, Segues and Protocols Challenge SolutionTests-Info.plist"; sourceTree = "<group>"; };
 		01992B821820363C00A40EB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		01992B841820363C00A40EB5 /* NSUserDefaults__Segues_and_Protocols_Challenge_SolutionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaults__Segues_and_Protocols_Challenge_SolutionTests.m; sourceTree = "<group>"; };
+		01992B8E1820368700A40EB5 /* NWSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWSignInViewController.h; sourceTree = "<group>"; };
+		01992B8F1820368700A40EB5 /* NWSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWSignInViewController.m; sourceTree = "<group>"; };
+		01992B911820369300A40EB5 /* NWCreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NWCreateAccountViewController.h; sourceTree = "<group>"; };
+		01992B921820369300A40EB5 /* NWCreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NWCreateAccountViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,10 @@
 				01992B681820363C00A40EB5 /* NWAppDelegate.h */,
 				01992B691820363C00A40EB5 /* NWAppDelegate.m */,
 				01992B6B1820363C00A40EB5 /* Main.storyboard */,
+				01992B911820369300A40EB5 /* NWCreateAccountViewController.h */,
+				01992B921820369300A40EB5 /* NWCreateAccountViewController.m */,
+				01992B8E1820368700A40EB5 /* NWSignInViewController.h */,
+				01992B8F1820368700A40EB5 /* NWSignInViewController.m */,
 				01992B6E1820363C00A40EB5 /* NWViewController.h */,
 				01992B6F1820363C00A40EB5 /* NWViewController.m */,
 				01992B711820363C00A40EB5 /* Images.xcassets */,
@@ -250,9 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01992B931820369300A40EB5 /* NWCreateAccountViewController.m in Sources */,
 				01992B701820363C00A40EB5 /* NWViewController.m in Sources */,
 				01992B661820363C00A40EB5 /* main.m in Sources */,
 				01992B6A1820363C00A40EB5 /* NWAppDelegate.m in Sources */,
+				01992B901820368700A40EB5 /* NWSignInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
