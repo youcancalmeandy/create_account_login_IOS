@@ -7,6 +7,7 @@
 //
 
 #import "NWViewController.h"
+#import "NWCreateAccountViewController.h"
 
 @interface NWViewController ()
 
@@ -17,7 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.usernameLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:USERNAME];
+    self.passwordLabel.text = [[NSUserDefaults standardUserDefaults] objectForKey:PASSWORD];
 }
 
 - (void)didReceiveMemoryWarning
